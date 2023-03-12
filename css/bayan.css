@@ -17,7 +17,8 @@ body {
 }
 .section {
     margin: 0  auto;
-    width: 1080px;
+    width: 100%;
+    color: blue;
 }
  .section ul {    
 
@@ -39,18 +40,21 @@ body {
     position: relative;
     justify-content: space-between;
 }
-.section label::after:hover {
+.section:hover .label::after {
     width: 16px;
     max-height: 16px;
-  
+}
+.section:hover {
+    color: #000;
 }
  .label::after {
     content: "";
     display: block;
     width: 16px;
-    max-height: 16px;
+    max-height: 0px;
     background-size: contain;
     background-image: url("../Image/plus.svg");
+    
 } 
 
 .radio_input:checked ~ .label::after {
@@ -62,20 +66,24 @@ body {
     transition: 0.5s;
  }
 .radio_input:checked ~ .image {
-    max-height: 1000px;
-    
+    max-height: 2000px;
 }
 .radio_input:hover ~ .image {
-    max-height: 1000px;
-    
+    max-height: 2000px;
 }
+
 .image {
     display: block;
     margin: 0  auto;
     overflow: hidden;
-    transition: 5s;
+    transition: 2s ease-in-out;
     max-height: 0;
     cursor: pointer;
+    object-fit: cover;
+}
+.image img{
+    object-fit: cover;
+    max-width: 60%;
 }
 
 .radio_input {
@@ -84,4 +92,5 @@ body {
     opacity: 0;
     cursor: pointer;
 }
+
 
