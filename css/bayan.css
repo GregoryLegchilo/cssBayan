@@ -21,7 +21,6 @@ body {
     color: blue;
 }
  .section ul {    
-
     list-style-type: none;
     margin: 20px;
 } 
@@ -34,8 +33,9 @@ body {
 
 .label {
     display: flex;
+    padding: 10px;
     margin: 0  auto;
-    border-top: 1px solid #000;
+    border-top: 1px solid #000 ;
     cursor: pointer;
     position: relative;
     justify-content: space-between;
